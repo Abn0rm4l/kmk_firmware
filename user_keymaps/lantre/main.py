@@ -129,6 +129,17 @@ keyboard.extensions.append(rgb)
 split = Split(data_pin=keyboard.rx, data_pin2=keyboard.tx, uart_flip=False)
 keyboard.modules.append(split)
 
+# Combos
+from kmk.modules.combos import Combos, Chord, Sequence
+combos = Combos()
+keyboard.modules.append(combos)
+
+combos.combos = [
+    Chord((KC.D, KC.F), KC.ESC),
+    Chord((KC.J, KC.K), KC.TAB)
+]
+
+# Hold Tap
 entsft = KC.HT(KC.ENT, KC.LSFT)
 esctl = KC.HT(KC.ESC, KC.LCTL)
 
