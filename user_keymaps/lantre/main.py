@@ -146,7 +146,7 @@ keyboard.keymap = [
         KC.MEDIA_NEXT_TRACK,
     ],
     [ # Layer 1 - Symbols
-        KC.F1,   KC.F2,    KC.F3,   KC.F4,   KC.F5,   KC.F6,                     KC.F7,   KC.F8,   KC.F9,   KC.F10,  KC.F11, KC.F12,
+        KC.F11,  KC.F1,    KC.F2,   KC.F3,   KC.F4,   KC.F5,                     KC.F6,   KC.F7,   KC.F8,   KC.F9,   KC.F10, KC.F12,
         KC.TRNS, KC.QUOTE, KC.DQT,  KC.CIRC, KC.QUES, KC.GRV,                    KC.LBRC, KC.LABK, KC.EQL,  KC.RABK, KC.RBRC, KC.TRNS,
         KC.TRNS, KC.EXLM,  KC.AT,   KC.HASH, KC.DLR,  KC.PERC,                   KC.LCBR, KC.LPRN, KC.COLN, KC.RPRN, KC.RCBR, KC.TRNS,
         KC.TRNS, KC.TRNS,  KC.TILD, KC.PIPE, KC.AMPR, KC.SCLN, KC.TRNS, KC.TRNS, KC.SLSH, KC.ASTR, KC.MINS, KC.PLUS, KC.UNDS, KC.TRNS,
@@ -157,12 +157,12 @@ keyboard.keymap = [
         KC.MEDIA_PREV_TRACK,
         KC.MEDIA_NEXT_TRACK,
     ],
-    [ # Layer 2 - Nav
-        KC.N2,   KC.EXLM, KC.AT,   KC.HASH, KC.DLR,  KC.PERC,                   KC.CIRC, KC.AMPR, KC.ASTR, KC.LPRN, KC.RPRN, KC.TILD,
-        KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,                   KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.PLUS, KC.UNDS,
-        KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,                   KC.LEFT, KC.DOWN, KC.UP,   KC.RIGHT, KC.COLN, KC.DQT,
-        KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.LCBR, KC.RCBR, KC.TRNS, KC.TRNS, KC.LABK, KC.RABK, KC.QUES, KC.TRNS,
-                                   KC.LGUI, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,
+    [ # Layer 2 - Nav/Num
+        KC.N2,   KC.EXLM, KC.AT,   KC.HASH, KC.DLR,  KC.PERC,                   KC.CIRC, KC.AMPR, KC.ASTR, KC.LPRN,  KC.RPRN, KC.TILD,
+        KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,                   KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,  KC.PLUS, KC.UNDS,
+        KC.TRNS, KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,                     KC.LEFT, KC.DOWN, KC.UP,   KC.RIGHT, KC.COLN, KC.DQT,
+        KC.TRNS, KC.N6,   KC.N7,   KC.N8,   KC.N9,   KC.N0,   KC.LCBR, KC.RCBR, KC.TRNS, KC.TRNS, KC.LABK, KC.RABK,  KC.QUES, KC.TRNS,
+                                   KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,
         KC.AUDIO_VOL_UP,
         KC.AUDIO_VOL_DOWN,
         KC.MEDIA_PREV_TRACK,
