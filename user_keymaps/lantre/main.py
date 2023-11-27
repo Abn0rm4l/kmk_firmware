@@ -12,7 +12,7 @@ from kmk.extensions.peg_rgb_matrix import Rgb_matrix
 from kmk.handlers.sequences import ENTER_KEY, send_string
 from kmk.hid import HIDModes
 from kmk.keys import KC
-from kmk.modules.holdtap import HoldTap
+from kmk.modules.holdtap import HoldTap, HoldTapRepeat
 from kmk.modules.layers import Layers
 from kmk.modules.split import Split, SplitSide, SplitType
 
@@ -123,9 +123,6 @@ rgb = Rgb_matrix(
 )
 keyboard.extensions.append(rgb)
 
-# TODO Comment one of these on each side
-# split_side = SplitSide.LEFT
-# split_side = SplitSide.RIGHT
 split = Split(data_pin=keyboard.rx, data_pin2=keyboard.tx, uart_flip=False)
 keyboard.modules.append(split)
 
@@ -140,16 +137,19 @@ combos.combos = [
 ]
 
 # Hold Tap
-entsft = KC.HT(KC.ENT, KC.LSFT)
-esctl = KC.HT(KC.ESC, KC.LCTL)
+ENTSFT = KC.HT(KC.ENT, KC.LSFT)
+ESCTL = KC.HT(KC.ESC, KC.LCTL)
+TABMO1 = KC.HT(KC.TAB, KC.MO(1))
+BSPMO2 = KC.HT(KC.BSPC, KC.MO(2), repeat=HoldTapRepeat.TAP)
 
+# Keymap
 keyboard.keymap = [
     [ # Layer 0
         KC.GRV,  KC.N1,   KC.N2,   KC.N3,    KC.N4,   KC.N5,                      KC.N6,   KC.N7,    KC.N8,    KC.N9,  KC.N0,    KC.GRV,
         KC.TAB,  KC.Q,    KC.W,    KC.E,     KC.R,    KC.T,                       KC.Y,    KC.U,     KC.I,     KC.O,   KC.P,     KC.MINS,
-        esctl,   KC.A,    KC.S,    KC.D,     KC.F,    KC.G,                       KC.H,    KC.J,     KC.K,     KC.L,   KC.SCLN,  KC.QUOT,
-        KC.LSFT, KC.Z,    KC.X,    KC.C,     KC.V,    KC.B,     KC.LBRC, KC.RBRC, KC.N,    KC.M,     KC.COMMA, KC.DOT, KC.SLSH,  KC.RSFT,
-                                   KC.LGUI,  KC.LALT, KC.MO(1), entsft,  KC.SPC,  KC.MO(2), KC.BSPC, KC.RGUI,
+        ESCTL,   KC.A,    KC.S,    KC.D,     KC.F,    KC.G,                       KC.H,    KC.J,     KC.K,     KC.L,   KC.SCLN,  KC.QUOT,
+        KC.LSFT, KC.Z,    KC.X,    KC.C,     KC.V,    KC.B,   KC.LBRC, KC.RBRC,   KC.N,    KC.M,     KC.COMMA, KC.DOT, KC.SLSH,  KC.RSFT,
+                                   KC.LGUI,  KC.LALT, TABMO1, ENTSFT,  KC.SPC,    BSPMO2, KC.DEL, KC.RGUI,
         # Encoders
         KC.AUDIO_VOL_UP,
         KC.AUDIO_VOL_DOWN,
