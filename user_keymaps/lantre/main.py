@@ -48,8 +48,8 @@ oled = Oled(
 keyboard.extensions.append(oled)
 
 # Default RGB matrix colours
-COLOUR1 = [85, 0, 255]
-COLOUR2 = [0, 255, 234]
+COLOUR1 = [0, 0, 0]
+COLOUR2 = [0, 0, 0]
 UG_COLOUR1 = [85, 0, 255]
 UG_COLOUR2 = [0, 255, 234]
 
