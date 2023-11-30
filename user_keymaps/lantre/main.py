@@ -48,78 +48,30 @@ oled = Oled(
 keyboard.extensions.append(oled)
 
 # Default RGB matrix colours
+COLOUR1 = [85, 0, 255]
+COLOUR2 = [0, 255, 234]
+UG_COLOUR1 = [85, 0, 255]
+UG_COLOUR2 = [0, 255, 234]
+
 rgb = Rgb_matrix(
     ledDisplay=[
-        [85, 0, 255],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [85, 0, 255],
-        [85, 0, 255],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [85, 0, 255],
-        [85, 0, 255],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [85, 0, 255],
-        [85, 0, 255],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [85, 0, 255],
-        [85, 0, 255],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [85, 0, 255],
-        [85, 0, 255],
-        [85, 0, 255],
-        [85, 0, 255],
-        [0, 255, 234],
-        [0, 255, 234],
-        [85, 0, 255],
-        [85, 0, 255],
-        [85, 0, 255],
-        [85, 0, 255],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [85, 0, 255],
-        [85, 0, 255],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [0, 255, 234],
-        [85, 0, 255],
+        # Row 1
+        COLOUR1, COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR2,                   COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR1,
+        # Row 2
+        COLOUR1, COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR2,                   COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR1,
+        # Row 3
+        COLOUR1, COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR2,                   COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR1,
+        # Row 4
+        COLOUR1, COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR1, COLOUR1, COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR2, COLOUR1,
+        # Row 5
+                                   COLOUR1, COLOUR1, COLOUR1, COLOUR2, COLOUR2, COLOUR1, COLOUR1, COLOUR1,
+        # Under Glow
+        ## Left
+        UG_COLOUR1, UG_COLOUR2, UG_COLOUR2,
+        UG_COLOUR2, UG_COLOUR2, UG_COLOUR1,
+        ## Right
+        UG_COLOUR1, UG_COLOUR2, UG_COLOUR2,
+        UG_COLOUR2, UG_COLOUR2, UG_COLOUR1,
     ],
     split=True,
     rightSide=False,
@@ -184,7 +136,7 @@ keyboard.keymap = [
         KC.MEDIA_PREV_TRACK,
         KC.MEDIA_NEXT_TRACK,
     ],
-    [
+    [ # Layer 3 - Misc
         KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,                   KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,
         KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,                   KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,
         KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,                   KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,
