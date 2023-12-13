@@ -2,20 +2,14 @@ import supervisor
 
 from kb import KMKKeyboard
 
-from kmk.extensions.peg_oled_Display import (
-    Oled,
-    OledData,
-    OledDisplayMode,
-    OledReactionType,
-)
 from kmk.extensions.peg_rgb_matrix import Rgb_matrix
-from kmk.handlers.sequences import ENTER_KEY, send_string
 from kmk.hid import HIDModes
 from kmk.keys import KC
 from kmk.modules.holdtap import HoldTap, HoldTapRepeat
 from kmk.modules.layers import Layers
-from kmk.modules.split import Split, SplitSide, SplitType
+from kmk.modules.split import Split
 from kmk.modules.capsword import CapsWord
+from kmk.modules.combos import Combos, Chord
 
 keyboard = KMKKeyboard()
 holdtap = HoldTap()
@@ -26,28 +20,7 @@ keyboard.modules.append(layers)
 keyboard.modules.append(holdtap)
 keyboard.modules.append(caps_word)
 
-oled = Oled(
-    OledData(
-        corner_one={0: OledReactionType.STATIC, 1: ['qwertyzzzz']},
-        corner_two={
-            0: OledReactionType.LAYER,
-            1: ['1', '2', '3', '4', '5', '6', '7', '8'],
-        },
-        corner_three={
-            0: OledReactionType.LAYER,
-            1: ['base', 'raise', 'lower', 'adjust', '5', '6', '7', '8'],
-        },
-        corner_four={
-            0: OledReactionType.LAYER,
-            1: ['qwertyzzz', 'nums', 'shifted', 'leds', '5', '6', '7', '8'],
-        },
-    ),
-    toDisplay=OledDisplayMode.TXT,
-    flip=False,
-)
-keyboard.extensions.append(oled)
-
-# Default RGB matrix colours
+# RGB matrix colours
 COLOUR1 = [0, 0, 0]
 COLOUR2 = [0, 0, 0]
 UG_COLOUR1 = [85, 0, 255]
@@ -83,7 +56,6 @@ split = Split(data_pin=keyboard.rx, data_pin2=keyboard.tx, uart_flip=False)
 keyboard.modules.append(split)
 
 # Combos
-from kmk.modules.combos import Combos, Chord, Sequence
 combos = Combos()
 keyboard.modules.append(combos)
 
@@ -197,5 +169,6 @@ keyboard.keymap = [
         KC.TRNS,
     ],
 ]
+
 if __name__ == '__main__':
     keyboard.go(hid_type=HIDModes.USB)
