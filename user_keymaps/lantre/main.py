@@ -74,11 +74,11 @@ CAPSGUI = KC.HT(KC.CW, KC.LGUI)
 # Keymap
 keyboard.keymap = [
     [ # Layer 0
-        KC.GRV,  KC.N1,   KC.N2,   KC.N3,    KC.N4,   KC.N5,                      KC.N6,   KC.N7,    KC.N8,    KC.N9,  KC.N0,    KC.GRV,
+        KC.GRV,  KC.N1,   KC.N2,   KC.N3,    KC.N4,   KC.N5,                      KC.N6,   KC.N7,    KC.N8,    KC.N9,  KC.N0,    KC.EQUAL,
         KC.TAB,  KC.Q,    KC.W,    KC.E,     KC.R,    KC.T,                       KC.Y,    KC.U,     KC.I,     KC.O,   KC.P,     KC.MINS,
         ESCTL,   KC.A,    KC.S,    KC.D,     KC.F,    KC.G,                       KC.H,    KC.J,     KC.K,     KC.L,   KC.SCLN,  KC.QUOT,
-        CAPSGUI, KC.Z,    KC.X,    KC.C,     KC.V,    KC.B,   KC.LBRC, KC.RBRC,   KC.N,    KC.M,     KC.COMMA, KC.DOT, KC.SLSH,  KC.RSFT,
-                                   KC.LGUI,  KC.LALT, TABMO1, ENTSFT,  KC.SPC,    BSPMO2, KC.DEL, KC.RGUI,
+        KC.LGUI, KC.Z,    KC.X,    KC.C,     KC.V,    KC.B,   KC.LBRC,  KC.RBRC,  KC.N,    KC.M,     KC.COMMA, KC.DOT, KC.SLSH,  ENTSFT,
+                                   KC.LGUI,  KC.LALT, TABMO1, KC.LSFT,  KC.SPC,   BSPMO2,  KC.DEL,   KC.RGUI,
         # Encoders
         KC.AUDIO_VOL_UP,
         KC.AUDIO_VOL_DOWN,
