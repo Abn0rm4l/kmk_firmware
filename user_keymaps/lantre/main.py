@@ -60,8 +60,10 @@ combos = Combos()
 keyboard.modules.append(combos)
 
 combos.combos = [
-    Chord((KC.D, KC.F), KC.ESC),
-    Chord((KC.J, KC.K), KC.TAB)
+    Chord((KC.D, KC.F), KC.MEH),
+    Chord((KC.S, KC.D, KC.F), KC.HYPR),
+    Chord((KC.J, KC.K), KC.MEH),
+    Chord((KC.J, KC.K, KC.L), KC.HYPR)
 ]
 
 # Hold Tap
