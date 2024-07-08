@@ -23,8 +23,10 @@ keyboard.modules.append(caps_word)
 # RGB matrix colours
 COLOUR1 = [0, 0, 0]
 COLOUR2 = [0, 0, 0]
-UG_COLOUR1 = [85, 0, 255]
-UG_COLOUR2 = [0, 255, 234]
+UG_COLOUR1_OG = [85, 0, 255]
+UG_COLOUR2_OG = [0, 255, 234]
+UG_COLOUR1 = [x * 0.75 for x in UG_COLOUR1_OG]
+UG_COLOUR2 = [x * 0.75 for x in UG_COLOUR2_OG]
 
 rgb = Rgb_matrix(
     ledDisplay=[
@@ -39,12 +41,10 @@ rgb = Rgb_matrix(
         # Row 5
                                    COLOUR1, COLOUR1, COLOUR1, COLOUR2, COLOUR2, COLOUR1, COLOUR1, COLOUR1,
         # Under Glow
-        ## Left
-        UG_COLOUR1, UG_COLOUR2, UG_COLOUR2,
-        UG_COLOUR2, UG_COLOUR2, UG_COLOUR1,
-        ## Right
-        UG_COLOUR1, UG_COLOUR2, UG_COLOUR2,
-        UG_COLOUR2, UG_COLOUR2, UG_COLOUR1,
+        ## First Row
+        UG_COLOUR2, UG_COLOUR1, UG_COLOUR1, UG_COLOUR1, UG_COLOUR1, UG_COLOUR2,
+        ## Second Row
+        UG_COLOUR2, UG_COLOUR1, UG_COLOUR1, UG_COLOUR1, UG_COLOUR1, UG_COLOUR2,
     ],
     split=True,
     rightSide=False,
