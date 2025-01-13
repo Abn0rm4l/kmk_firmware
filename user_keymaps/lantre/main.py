@@ -90,11 +90,11 @@ keyboard.keymap = [
         KC.MEDIA_NEXT_TRACK,
     ],
     [ # Layer 1 - Symbols
-        KC.TRNS, KC.EXLM,   KC.AT,   KC.HASH, KC.DLR,  KC.PERC,                   KC.CIRC, KC.AMPR, KC.ASTR, KC.LPRN, KC.RPRN, KC.TILD,
-        KC.TRNS, KC.QUOTE,  KC.DQT,  KC.CIRC, KC.QUES, KC.GRV,                    KC.LBRC, KC.LABK, KC.EQL,  KC.RABK, KC.RBRC, KC.TRNS,
-        KC.TRNS, KC.EXLM,   KC.AT,   KC.HASH, KC.DLR,  KC.PERC,                   KC.LCBR, KC.LPRN, KC.COLN, KC.RPRN, KC.RCBR, KC.TRNS,
-        KC.TRNS, KC.BSLASH, KC.TILD, KC.PIPE, KC.AMPR, KC.SCLN, KC.TRNS, KC.TRNS, KC.SLSH, KC.ASTR, KC.MINS, KC.PLUS, KC.UNDS, KC.TRNS,
-                                     KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.DEL,  KC.TRNS,
+        KC.TRNS, KC.EXLM, KC.AT, KC.HASH, KC.DLR,  KC.PERC,                   KC.CIRC, KC.AMPR, KC.ASTR, KC.LPRN, KC.RPRN, KC.TRNS,
+        KC.TRNS, KC.NO,   KC.NO, KC.NO,   KC.NO,   KC.NO,                     KC.LBRC, KC.LABK, KC.EQL,  KC.RABK, KC.RBRC, KC.TRNS,
+        KC.TRNS, KC.NO,   KC.NO, KC.NO,   KC.NO,   KC.NO,                     KC.LCBR, KC.LPRN, KC.COLN, KC.RPRN, KC.RCBR, KC.TRNS,
+        KC.TRNS, KC.NO,   KC.NO, KC.NO,   KC.NO,   KC.NO,   KC.TRNS, KC.TRNS, KC.SLSH, KC.BSLS, KC.UNDS, KC.PIPE, KC.PLUS, KC.TRNS,
+                                 KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,
         # Encoders
         KC.AUDIO_VOL_UP,
         KC.AUDIO_VOL_DOWN,
