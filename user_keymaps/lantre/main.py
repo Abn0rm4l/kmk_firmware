@@ -102,11 +102,11 @@ keyboard.keymap = [
         KC.MEDIA_NEXT_TRACK,
     ],
     [ # Layer 2 - Nav/Num
-        KC.F11,  KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,                     KC.F6,   KC.F7,   KC.F8,   KC.F9,    KC.F10,  KC.F12,
-        KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,                   KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,  KC.TRNS, KC.TRNS,
-        KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,                   KC.LEFT, KC.DOWN, KC.UP,   KC.RIGHT, KC.TRNS, KC.TRNS,
-        KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,  KC.TRNS, KC.TRNS,
-                                   KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,
+        KC.F11,  KC.F1, KC.F2, KC.F3,   KC.F4,   KC.F5,                     KC.F6,   KC.F7,   KC.F8, KC.F9,    KC.F10, KC.F12,
+        KC.TRNS, KC.NO, KC.NO, KC.NO,   KC.NO,   KC.NO,                     KC.NO,   KC.NO,   KC.NO, KC.NO,    KC.NO,  KC.TRNS,
+        KC.TRNS, KC.NO, KC.NO, KC.NO,   KC.NO,   KC.NO,                     KC.LEFT, KC.DOWN, KC.UP, KC.RIGHT, KC.NO,  KC.TRNS,
+        KC.TRNS, KC.NO, KC.NO, KC.NO,   KC.NO,   KC.NO,   KC.TRNS, KC.TRNS, KC.NO,   KC.NO,   KC.NO, KC.NO,    KC.NO,  KC.TRNS,
+                               KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS, KC.TRNS,
         # Encoders
         KC.AUDIO_VOL_UP,
         KC.AUDIO_VOL_DOWN,
